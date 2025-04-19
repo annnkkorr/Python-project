@@ -1,4 +1,4 @@
-#запуск программы ,до этапа улучшения изображения
+#запуск программы ,до этапа улучшения изображения и анализ контура споры
 import os
 import sys
 import cv2
@@ -49,3 +49,18 @@ class SporeAnalyzer:
         except Exception as e:
             print(f"Ошибка улучшения изображения: {str(e)}")
             return None
+            
+ #анализ контура споры
+  def analyze_contour(self, contour):
+        area = cv2.contourArea(contour)
+        if area < 10:
+            return None
+            
+        (x, y), radius = cv2.minEnclosingCircle(contour)
+        center = np.array([int(x), int(y)])
+        points = contour.reshape(-1, 2)
+        
+        distances = np.linalg.norm(points - center, axis=1)
+        if len(distances) == 0:
+            return None
+
