@@ -16,7 +16,8 @@
 ## Установка
   git clone https://github.com/annnkkorr/Python-project.git
   cd Python-project
-
+   **Версия google colab**:
+https://github.com/annnkkorr/Python-project/blob/main/funguy_colab.py
 ## Ввод
 Программа принимает следующие данные:
 •   **Входная директория**: Путь к папке, содержащей изображения для анализа (форматы: `.jpg`, `.jpeg`, `.png`).
