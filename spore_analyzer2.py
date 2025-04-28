@@ -1,6 +1,3 @@
-# Установка библиотек: (если нужно)
-# pip install opencv-python-headless numpy pandas scikit-image tqdm openpyxl matplotlib
-
 import os
 import cv2
 import numpy as np
